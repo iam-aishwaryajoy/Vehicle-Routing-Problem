@@ -25,7 +25,7 @@ This project aims to solve the Vehicle Routing Problem (VRP) by addressing missi
 
 ## Project Structure
 * data/: Directory containing the dataset.
-* scripts/: Directory containing all the scripts for data preprocessing, time prediction, and route optimization.
+* source/: Directory containing all the scripts for data preprocessing, time prediction, and route optimization.
 * notebooks/: Jupyter notebooks for exploratory data analysis and model experimentation.
 * models/: Directory to save and load trained models.
 * requirements.txt: List of required Python libraries.
