@@ -63,15 +63,22 @@ class Preprocessing:
         return max_variable, max_value, corr
     
     def regression_prediction(self, data, Y, X):
+        '''  
+        This function is used to fill missing data using regression approach. The data has X component which is the input and Y' component which is the output of regression model.
+        Using X data it will predict Y'. And fill those predicted values into the missing values of Y column. 
+        
+        '''
         data = data[[X,Y]].copy()
         count = data[X].isna().sum()
+        
+        #Handling missing values in X:
         if count > 0:
-            data['multiple_deliveries'] = pd.to_numeric(data['multiple_deliveries'], errors='coerce')
+            data[X] = pd.to_numeric(data[X], errors='coerce') 
             mean_value = data[X].mean() 
             data.loc[:, X] = data[X].fillna(mean_value)
             print(f'    Train Data Filling Gaps for {X} for predicting {Y}')
+
         train_data = data.dropna(subset=[Y])
-        
         predict_data = data[data[Y].isnull()]  # Data that needs prediction (missing 'Y')
         predict_data = predict_data[[X]].dropna() #Dropped X that is null
 
@@ -92,6 +99,8 @@ class Preprocessing:
 
     def handling_missing(self):
         def handle(data,  missing_data, train):
+            ''' The X and Y component is selected based on correlation map'''
+
             self.flag = False
             self.train_map = {'Delivery_person_ID':'Delivery_location_latitude',
                             'Delivery_person_Age':'Time_taken(min)', 'Road_traffic_density':'Time_taken(min)',
@@ -161,13 +170,22 @@ class Preprocessing:
         for feature in self.test.columns:
             attr, score, corr = self.correlation(self.test, feature) 
             self.test_corr[feature] = attr
-        print(self.test_corr)
 
         if self.flag == False:
                 print('    Handled Missing value without alteration!')
         
 
     def return_data(self):
+        # Check if there are any missing values in the testing set
+        missing_train = self.train.isnull().sum()
+        missing_test = self.test.isnull().sum()
+        if missing_train.any():
+            print("There are missing values in the training dataset:")
+            print(missing_train[missing_train > 0])   
+        if missing_test.any():
+            print("There are missing values in the testing dataset:")
+            print(missing_test[missing_test > 0])
+
         self.train.to_csv('data/interim/train.csv', index=False)
         self.train.to_csv('data/interim/test.csv', index=False)
         return self.train, self.test
