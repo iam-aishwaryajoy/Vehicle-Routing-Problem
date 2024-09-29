@@ -10,6 +10,7 @@ This project aims to solve the Vehicle Routing Problem (VRP) by addressing missi
 * Utilizes linear regression to handle missing data points in the dataset.
 * The linear relationship is based on correlation matrix.
 * Ensures data integrity and completeness before applying predictive models.
+* The data which enters into the model will not have any missing values.
 
 ### Delivery Time Prediction:
 
