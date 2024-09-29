@@ -11,7 +11,7 @@ This project aims to solve the Vehicle Routing Problem (VRP) by addressing missi
 * The linear relationship is based on correlation matrix.
 * Ensures data integrity and completeness before applying predictive models.
 
-### Time Prediction:
+### Delivery Time Prediction:
 
 * Predicts the time required for specific orders based on historical data and relevant features.
 * Helps plan and manage delivery schedules effectively.
