@@ -28,16 +28,31 @@ class Preprocessing:
         self.train['Time_Orderd'] = self.train['Time_Orderd'].str.replace(':', '', regex=True)
         self.test['Time_Orderd'] = self.test['Time_Orderd'].str.replace(':', '', regex=True)       
 
+
     
-        
     def convert_integer_encodings(self, cols):
+        train_mappings = []
+        test_mappings = []
+
         for col in cols:
-            category_to_integer = {category: idx for idx, category in enumerate(self.train[col].unique())}
+            # Combine unique categories from both train and test
+            combined_categories = pd.Series(pd.concat([self.train[col], self.test[col]]).unique())
+            
+            # Filter out NaN and any other unwanted values like 'n/a'
+            valid_categories = combined_categories[~combined_categories.isna() & (combined_categories != 'nan')]
+
+            # Create a mapping for the combined categories
+            category_to_integer = {category: idx for idx, category in enumerate(valid_categories)}
+
+            # Map the training data
             self.train[col] = self.train[col].map(category_to_integer)
-        
-        for col in cols:
-            category_to_integer = {category: idx for idx, category in enumerate(self.test[col].unique())}
+            train_mappings.append((col, category_to_integer))
+            
+            # Map the test data
             self.test[col] = self.test[col].map(category_to_integer)
+            test_mappings.append((col, category_to_integer))
+
+        return train_mappings, test_mappings
     
     def handle_nan(self):
         self.train.replace('NaN ', np.nan, inplace=True)

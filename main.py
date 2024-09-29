@@ -7,4 +7,4 @@ if __name__ == "__main__":
     train = 'data/input/train.csv'
     test = 'data/input/test.csv'
     delivery_sys = DeliverySystem(train, test)
-    delivery_sys.train_the_model()
+    delivery_sys.data_making()
