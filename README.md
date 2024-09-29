@@ -16,6 +16,7 @@ This project aims to solve the Vehicle Routing Problem (VRP) by addressing missi
 * Predicts the time required for specific orders based on historical data and relevant features.
 * Helps plan and manage delivery schedules effectively.
 * The Random Forest model has a significantly lower MSE (20.48) compared to Linear Regression (42.72). This suggests that the Random Forest model's predictions are closer to the actual values. The Random Forest model has an R² Score of 0.77, which is substantially better than Linear Regression's 0.51. 
+* Hypertuning RF model using the accuracy metric which is calculated based on minimum tolerance of 5 minutes. Is_accurate is a boolean array which indicate whether predictions falls within the difference of five minutes.
 
 ### Optimal Route Prediction:
 * Uses advanced algorithms to determine the optimal set of routes for a fleet of vehicles.
