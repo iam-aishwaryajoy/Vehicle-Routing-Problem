@@ -1,32 +1,45 @@
 from source.libraries import *
 
 class Preprocessing:
-    def __init__(self, train, test):
+    def __init__(self, train, test, type='train'):
         self.train = train
         self.test = test
         self.train_corr = {}
         self.test_corr = {}
+        self.type = type
     
     def drop(self, col):
-        self.train.drop(col, axis=1, inplace=True)
-        self.test.drop(col, axis=1, inplace=True)
-        print(f'    Dropped {col}')
+        if self.type == 'test':
+            self.test.drop(col, axis=1, inplace=True)
+            print(f'    Dropped {col}')
+        else:
+            self.train.drop(col, axis=1, inplace=True)
+            self.test.drop(col, axis=1, inplace=True)
+            print(f'    Dropped {col}')
+
+
     
     def handle_string(self):
-        self.train['Time_taken(min)'] = self.train['Time_taken(min)'].str.replace('(min)','', regex=False) 
-        self.train['Time_taken(min)'] = self.train['Time_taken(min)'].astype(int)   
+        if self.type == 'train':
+            self.train['Time_taken(min)'] = self.train['Time_taken(min)'].str.replace('(min)','', regex=False) 
+            self.train['Time_taken(min)'] = self.train['Time_taken(min)'].astype(int)   
 
-        self.train['Weatherconditions'] = self.train['Weatherconditions'].str.replace('conditions ','', regex=False) 
-        self.test['Weatherconditions'] = self.test['Weatherconditions'].str.replace('conditions ','', regex=False) 
+            self.train['Weatherconditions'] = self.train['Weatherconditions'].str.replace('conditions ','', regex=False) 
+            self.test['Weatherconditions'] = self.test['Weatherconditions'].str.replace('conditions ','', regex=False) 
 
-        self.train['Order_Date'] = self.train['Order_Date'].str.replace('-', '', regex=True)
-        self.test['Order_Date'] = self.test['Order_Date'].str.replace('-', '', regex=True)
+            self.train['Order_Date'] = self.train['Order_Date'].str.replace('-', '', regex=True)
+            self.test['Order_Date'] = self.test['Order_Date'].str.replace('-', '', regex=True)
 
-        self.train['Time_Order_picked'] = self.train['Time_Order_picked'].str.replace(':', '', regex=True)
-        self.test['Time_Order_picked'] = self.test['Time_Order_picked'].str.replace(':', '', regex=True)
+            self.train['Time_Order_picked'] = self.train['Time_Order_picked'].str.replace(':', '', regex=True)
+            self.test['Time_Order_picked'] = self.test['Time_Order_picked'].str.replace(':', '', regex=True)
 
-        self.train['Time_Orderd'] = self.train['Time_Orderd'].str.replace(':', '', regex=True)
-        self.test['Time_Orderd'] = self.test['Time_Orderd'].str.replace(':', '', regex=True)       
+            self.train['Time_Orderd'] = self.train['Time_Orderd'].str.replace(':', '', regex=True)
+            self.test['Time_Orderd'] = self.test['Time_Orderd'].str.replace(':', '', regex=True)
+        else:
+            self.test['Weatherconditions'] = self.test['Weatherconditions'].str.replace('conditions ','', regex=False) 
+            self.test['Order_Date'] = self.test['Order_Date'].str.replace('-', '', regex=True)
+            self.test['Time_Order_picked'] = self.test['Time_Order_picked'].str.replace(':', '', regex=True)
+            self.test['Time_Orderd'] = self.test['Time_Orderd'].str.replace(':', '', regex=True)          
 
 
     
@@ -34,38 +47,47 @@ class Preprocessing:
         train_mappings = []
         test_mappings = []
 
-        for col in cols:
-            # Combine unique categories from both train and test
-            combined_categories = pd.Series(pd.concat([self.train[col], self.test[col]]).unique())
-            
-            # Filter out NaN and any other unwanted values like 'n/a'
-            valid_categories = combined_categories[~combined_categories.isna() & (combined_categories != 'nan')]
+        if self.type == 'train':
 
-            # Create a mapping for the combined categories
-            category_to_integer = {category: idx for idx, category in enumerate(valid_categories)}
+            for col in cols:
+                # Combine unique categories from both train and test
+                combined_categories = pd.Series(pd.concat([self.train[col], self.test[col]]).unique())
+                
+                # Filter out NaN and any other unwanted values like 'n/a'
+                valid_categories = combined_categories[~combined_categories.isna() & (combined_categories != 'nan')]
 
-            # Map the training data
-            self.train[col] = self.train[col].map(category_to_integer)
-            train_mappings.append((col, category_to_integer))
-            
-            # Map the test data
-            self.test[col] = self.test[col].map(category_to_integer)
-            test_mappings.append((col, category_to_integer))
+                # Create a mapping for the combined categories
+                category_to_integer = {category: idx for idx, category in enumerate(valid_categories)}
 
-        return train_mappings, test_mappings
+                # Map the training data
+                self.train[col] = self.train[col].map(category_to_integer)
+                train_mappings.append((col, category_to_integer))
+                
+                # Map the test data
+                self.test[col] = self.test[col].map(category_to_integer)
+                test_mappings.append((col, category_to_integer))
+
+            return train_mappings, test_mappings
     
     def handle_nan(self):
-        self.train.replace('NaN ', np.nan, inplace=True)
-        self.test.replace('NaN ', np.nan, inplace=True)
+        if self.type == 'train':
+            self.train.replace('NaN ', np.nan, inplace=True)
+            self.test.replace('NaN ', np.nan, inplace=True)
 
-        self.train.replace('condition NaN ', np.nan, inplace=True)
-        self.test.replace('condition NaN ', np.nan, inplace=True)
+            self.train.replace('condition NaN ', np.nan, inplace=True)
+            self.test.replace('condition NaN ', np.nan, inplace=True)
+        else:
+            self.test.replace('NaN ', np.nan, inplace=True)
+            self.test.replace('condition NaN ', np.nan, inplace=True)
 
         
         
     def convert_ordinal_encodings(self, col, size_mapping):
-        self.train[col] = self.train[col].map(size_mapping)
-        self.test[col] = self.test[col].map(size_mapping)
+        if self.type == 'train':
+            self.train[col] = self.train[col].map(size_mapping)
+            self.test[col] = self.test[col].map(size_mapping)
+        else:
+            self.test[col] = self.test[col].map(size_mapping)
     
     def correlation(self, data, X):
         corr = data.corr()   

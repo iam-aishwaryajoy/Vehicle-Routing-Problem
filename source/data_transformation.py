@@ -83,6 +83,51 @@ class Datatransformation:
 
         self.org_train = original_train_data
         self.org_test = original_test_data
+        self.map = train_mappings
 
         return self.train, self.test, self.org_train, self.org_test
      
+def preprocess_test_data(self):
+        print('    Data Cleaning and Preprocessing')
+        preprocess = Preprocessing(self.train, self.test, type='test')
+        preprocess.drop('ID')
+        preprocess.handle_nan()
+        preprocess.handle_string()
+        
+        #Ordinal Encoding
+        mapping = {'Sunny':1.0, 'Stormy':5.0, 'Sandstorms':6.0,'Cloudy':2.0, 'Fog':3.0, 'Windy':4.0, 'NaN':np.nan}
+        original_mapping_1 = {v:k.strip() for k,v in mapping.items()}
+        preprocess.convert_ordinal_encodings('Weatherconditions', mapping)
+        
+
+        mapping = {'Jam ': 3, 'High ':2, 'Medium ':1, 'Low ':0, 'NaN':np.nan}
+        original_mapping_2 = {v:k.strip() for k,v in mapping.items()}
+        preprocess.convert_ordinal_encodings('Road_traffic_density', mapping)
+        
+
+        # preprocess.handling_missing()
+        # self.train, self.test = preprocess.return_data()
+
+        #Original Data making
+        print('    Original Data Is stored')
+        original_test_data = self.test.copy()
+        
+        #For ordinal Encoding Attributes
+        original_test_data['Weatherconditions'] = original_test_data['Weatherconditions'].replace(original_mapping_1)
+        original_test_data['Road_traffic_density'] = original_test_data['Road_traffic_density'].replace(original_mapping_2)
+        #For Integer Encoding Attributes
+        original_test_data = self.original_data_making(self.map, original_test_data)
+
+       
+
+        #Check Missing value in Original data:
+        missing_test = original_test_data.isnull().sum()
+        if missing_test.any():
+            print("There are missing values in the original testing dataset:")
+            print(missing_test[missing_test > 0])
+
+        self.test.to_csv('data/final/valid_test.csv', index=False )
+        original_test_data.to_csv('data/final/original_test.csv', index=False )
+        self.org_test = original_test_data
+
+        return self.test, self.org_test

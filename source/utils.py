@@ -1,5 +1,7 @@
 from source.libraries import *
 import os
+import joblib
+import shutil
 
 class Save:
     def __init__(self, data, type, filename,  folder_name="output", timestamp=None):
@@ -27,6 +29,16 @@ class Save:
                 os.makedirs(folder_name)
             final_name = folder_name + '/' + filename
             data.savefig(final_name)  # Save the plot
+        if type == 'model':
+            if timestamp:
+                filename = f"{filename}_{timestamp}.pkl"
+            else:
+                filename = f"{filename}.pkl"
+
+            if not os.path.exists(folder_name):
+                os.makedirs(folder_name)
+            final_name = folder_name + '/' + filename
+            joblib.dump(data, filename=final_name)
 
 class Clear:
     def __init__(self):
