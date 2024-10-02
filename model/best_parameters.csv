@@ -1,101 +1,201 @@
 0
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=1608637542)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=1273642419)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=1935803228)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=787846414)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=996406378)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=1201263687)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=423734972)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=415968276)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=670094950)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=1914837113)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=669991378)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=429389014)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=249467210)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=1972458954)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=1572714583)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=1433267572)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=434285667)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=613608295)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=893664919)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=648061058)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=88409749)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=242285876)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=2018247425)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=953477463)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=1427830251)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=1883569565)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=911989541)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=3344769)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=780932287)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=2114032571)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=787716372)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=504579232)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=1306710475)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=479546681)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=106328085)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=30349564)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=1855189739)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=99052376)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=1250819632)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=106406362)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=480404538)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=1717389822)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=599121577)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=200427519)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=1254751707)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=2034764475)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=1573512143)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=999745294)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=1958805693)"
-"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_split=10,
-                      random_state=389151677)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1608637542)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1273642419)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1935803228)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=787846414)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=996406378)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1201263687)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=423734972)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=415968276)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=670094950)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1914837113)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=669991378)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=429389014)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=249467210)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1972458954)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1572714583)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1433267572)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=434285667)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=613608295)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=893664919)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=648061058)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=88409749)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=242285876)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=2018247425)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=953477463)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1427830251)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1883569565)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=911989541)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=3344769)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=780932287)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=2114032571)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=787716372)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=504579232)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1306710475)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=479546681)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=106328085)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=30349564)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1855189739)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=99052376)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1250819632)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=106406362)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=480404538)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1717389822)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=599121577)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=200427519)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1254751707)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=2034764475)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1573512143)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=999745294)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1958805693)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=389151677)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1224821422)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=508464061)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=857592370)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1642661739)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=61136438)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=2075460851)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=396917567)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=2004731384)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=199502978)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1545932260)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=461901618)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=774414982)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=732395540)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1934879560)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=279394470)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=56972561)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1927948675)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1899242072)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1999874363)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=271820813)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1324556529)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1655351289)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1308306184)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=68574553)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=419498548)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=991681409)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=791274835)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1035196507)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1890440558)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=787110843)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=524150214)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=472432043)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=2126768636)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1431061255)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=147697582)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=744595490)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1758017741)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1679592528)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1111451555)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=782698033)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=698027879)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1096768899)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1338788865)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=1826030589)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=86191493)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=893102645)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=200619113)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=290770691)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=793943861)"
+"DecisionTreeRegressor(max_depth=10, max_features='sqrt', min_samples_leaf=4,
+                      min_samples_split=10, random_state=134489564)"
