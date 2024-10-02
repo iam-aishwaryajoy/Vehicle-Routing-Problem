@@ -8,24 +8,16 @@ class DeliverySystem:
         self.test = pd.read_csv(test)
 
     def hypertune_random_forest(self, X_train, y_train, X_test, y_test):
-        # param_grid = {
-        # 'n_estimators': [50, 100, 200],  # Number of trees in the forest
-        # 'max_features': ['auto', 'sqrt', 'log2'],  # Number of features to consider at every split
-        # 'max_depth': [None, 10,],  # Maximum depth of the tree
-        # 'min_samples_split': [5, 10],  # Minimum number of samples required to split an internal node
-        # 'min_samples_leaf': [1, 4],  # Minimum number of samples required to be at a leaf node
-        # 'bootstrap': [True, False]  # Whether bootstrap samples are used when building trees
-        # }
         param_grid = {
-        'n_estimators': [50],  
-        'max_features': ['sqrt'],  
-        'max_depth': [10],  
-        'min_samples_split': [10],  
-        'min_samples_leaf': [1],  
-        'bootstrap': [True] 
-        }
+        'n_estimators': [50, 100, 200],
+        'max_features': ['sqrt'], 
+        'max_depth': [10],  # Include None for no maximum depth
+        'min_samples_split': [10],  # More options
+        'min_samples_leaf': [4],
+        'bootstrap': [True]  # Consider bootstrapping
+}
 
-        def calculate_accuracy(y_true, y_pred, tolerance=5):
+        def calculate_accuracy(y_true, y_pred, tolerance=0.9):
             # Convert predictions to binary classification based on a tolerance
             is_accurate = np.abs(y_true - y_pred) <= tolerance
             return accuracy_score(np.ones_like(is_accurate), is_accurate)
@@ -37,7 +29,7 @@ class DeliverySystem:
 
         rf = RandomForestRegressor(random_state=42)
         # grid_search = GridSearchCV(estimator=rf, param_grid=param_grid, cv=5, n_jobs=-1, verbose=0, scoring='neg_mean_squared_error')
-        grid_search = GridSearchCV(estimator=rf, param_grid=param_grid, cv=5, n_jobs=-1, verbose=0, scoring=scoring, refit='Accuracy')
+        grid_search = GridSearchCV(estimator=rf, param_grid=param_grid, cv=5, n_jobs=-1, verbose=0, scoring=scoring, refit='MSE')
       
         
         try:
@@ -78,10 +70,14 @@ class DeliverySystem:
 
     def training_model(self, alg='random_forest'):
         target_column = 'Time_taken(min)'  # Replace with your actual target column name
+        scaler = StandardScaler()
+        scaled_data = scaler.fit_transform(self.train)
+        self.train = pd.DataFrame(scaled_data, columns=self.train.columns)
         X = self.train.drop(columns=[target_column])  # Drop the target column to get features
         y = self.train[target_column]    
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)              # Get the target variable
-
+   
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=100)              # Get the target variable
+        
         print('Step 2: Splitting Data')
         print(f"    X_train shape: {X_train.shape}")
         print(f"    y_train shape: {y_train.shape}")
